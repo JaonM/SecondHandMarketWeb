@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping>
+	<class name="com.secondhandmarket.model.User" table="user" catalog="market">
+		<composite-id>
+				<key-property name="id" type="java.lang.Integer">
+					<column name="id" not-null="true"/>
+				</key-property>
+				<key-property name="account" type="java.lang.String">
+					<column name="account" not-null="true"/>
+				</key-property>
+			</composite-id>
+		
+		<property name="password" type="java.lang.String">
+			<column name="password" not-null="true"/>
+		</property>
+		
+		<property name="nickName" type="java.lang.String">
+			<column name="nickname"/>
+		</property>
+		
+		<property name="name" type="java.lang.String">
+			<column name="name"/>
+		</property>
+		
+		<property name="phone" type="java.lang.String">
+			<column name="phone" not-null="true"/>
+		</property>
+		
+		<property name="sNo" type="java.lang.String">
+			<column name="sno"/>
+		</property>
+		
+		<property name="sex" type="java.lang.Byte">
+			<column name="sex" not-null="true"/>
+		</property>
+		<property name="selfIntroduction" type="java.lang.String">
+			<column name="self_introduction"/>
+		</property>
+		<property name="userPhoto" type="java.lang.String">
+			<column name="user_photo"/>
+		</property>
+	</class>
+</hibernate-mapping>

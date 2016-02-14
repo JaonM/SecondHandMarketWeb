@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.secondhandmarket.model.Message" table="message">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" not-null="true"/>
+		</id>
+		<property name="userId" type="java.lang.Integer">
+			<column name="user_id" not-null="true"/>
+		</property>
+		<property name="itemId" type="java.lang.Integer">
+			<column name="item_id" not-null="true"/>
+		</property>
+		<property name="message" type="java.lang.String">
+			<column name="message" not-null="true"/>
+		</property>
+		<property name="isSend" type="java.lang.Integer">
+			<column name="is_send" not-null="true"/>
+		</property>
+		<property name="isReceiver" type="java.lang.Integer">
+			<column name="is_receiver" not-null="true"/>
+		</property>
+		<property name="time" type="java.sql.Timestamp">
+			<column name="time" not-null="true"/>
+		</property>
+	</class>
+</hibernate-mapping>

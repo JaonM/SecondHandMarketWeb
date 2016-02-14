@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+	<hibernate-mapping>
+		<class name="com.secondhandmarket.model.Relationship" table="relationship" catalog="market">
+			<composite-id name="relationshipId" class="com.secondhandmarket.model.RelationshipId">
+				<key-property name="user1Id" type="java.lang.Integer">
+					<column name="user1_id" not-null="true"/>
+				</key-property>
+				<key-property name="user2Id" type="java.lang.Integer">
+					<column name="user2_id" not-null="true"/>
+				</key-property>
+			</composite-id>
+			<property name="relation" type="java.lang.Byte">
+				<column name="relation" not-null="true"/>
+			</property>
+		</class>
+	</hibernate-mapping>
